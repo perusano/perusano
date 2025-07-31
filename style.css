@@ -1,0 +1,69 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* Light gray background */
+}
+.text-green-700 { color: #166534; } /* Darker green for main text */
+.bg-green-600 { background-color: #16a34a; } /* Medium green for buttons/accents */
+.hover\:bg-green-700:hover { background-color: #15803d; }
+.border-green-300 { border-color: #86efac; } /* Light green border */
+.placeholder-green-400::placeholder { color: #4ade80; }
+.focus\:ring-green-500:focus { --tw-ring-color: #22c55e; }
+
+/* Custom scrollbar for cart */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #a7f3d0; /* Light green */
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #6ee7b7; /* Slightly darker green */
+}
+
+/* Justify text within service cards */
+.service-card p {
+    text-align: justify;
+}
+
+/* Reduce font size for contact info text (adjusted for better readability) */
+#contacto .space-y-6 p { /* Changed from .space-y-4 to .space-y-6 */
+    font-size: 1.1rem; /* Slightly larger for better readability, combined with padding adjustments */
+    line-height: 1.5; /* Improve line spacing */
+}
+
+/* Enhanced shadows and rounded corners */
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+.shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+.rounded-xl { border-radius: 0.75rem; }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-3xl { border-radius: 1.5rem; }
+
+/* Drop shadow for text */
+.drop-shadow-lg {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+.drop-shadow-md {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.drop-shadow-sm {
+    text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* Modal specific styles for animation */
+#serviceRecommendationModal > div {
+    /* Initial state for scale and opacity, will be overridden by JS for 'active' state */
+    transform: scale(0.95);
+    opacity: 0;
+}
+
+#serviceRecommendationModal.active > div {
+    /* Final state for scale and opacity when modal is active */
+    transform: scale(1);
+    opacity: 1;
+}

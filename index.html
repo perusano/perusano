@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perú Sano - Servicios de Saneamiento</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-800">
+
+    <!-- Top Banner -->
+    <div class="w-full bg-gradient-to-r from-green-600 to-emerald-700 text-white text-center py-3 px-4 shadow-xl z-50 relative overflow-hidden">
+        <p class="text-lg md:text-xl font-semibold animate-pulse">
+            <i class="fas fa-sparkles mr-2"></i> ¡Transforma tu espacio hoy! Soluciones de saneamiento que brillan. <i class="fas fa-sparkles ml-2"></i>
+        </p>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg py-4 relative w-full z-50 rounded-b-xl">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+            <!-- Logo text "PERÚ SANO" on the far left -->
+            <a href="#" class="mb-4 md:mb-0 rounded-md p-2 hover:bg-green-50 transition duration-300">
+                <span class="text-3xl font-extrabold text-green-700 tracking-wide">PERÚ SANO</span>
+            </a>
+
+            <!-- Hamburger menu button for mobile -->
+            <button id="menuButton" class="md:hidden text-gray-700 hover:text-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 p-2 rounded-md">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <!-- Navigation links and Cart -->
+            <!-- This div will be toggled by JavaScript -->
+            <div id="navMenu" class="hidden md:flex flex-col md:flex-row items-center md:space-x-8 mt-4 md:mt-0 w-full md:w-auto">
+                <!-- Navigation links -->
+                <nav class="w-full md:w-auto">
+                    <ul class="flex flex-col md:flex-row md:space-x-8 text-lg font-medium w-full items-center">
+                        <li><a href="#inicio" class="block py-2 px-3 text-gray-700 hover:text-green-600 transition duration-300 rounded-md w-full text-center">Inicio</a></li>
+                        <li><a href="#servicios" class="block py-2 px-3 text-gray-700 hover:text-green-600 transition duration-300 rounded-md w-full text-center">Servicios</a></li>
+                        <!-- Testimonios y Contacto ocultos de la barra superior -->
+                        <!-- <li><a href="#testimonios" class="block py-2 px-3 text-gray-700 hover:text-green-600 transition duration-300 rounded-md w-full text-center">Testimonios</a></li> -->
+                        <!-- <li><a href="#contacto" class="block py-2 px-3 text-gray-700 hover:text-green-600 transition duration-300 rounded-md w-full text-center">Contacto</a></li> -->
+                    </ul>
+                </nav>
+
+                <!-- Cart only -->
+                <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                    <button id="cartButton" class="relative p-2 rounded-full bg-green-100 text-green-700 hover:bg-green-200 transition duration-300 focus:outline-none focus:ring-2 focus:ring-green-500">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cartItemCount" class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full transform translate-x-1/2 -translate-y-1/2">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-8 pb-12">
+        <!-- Hero Section - Title, Subtitle, Impactful Introduction, and Call to Action -->
+        <section id="inicio" class="bg-gradient-to-br from-green-100 to-emerald-200 py-24 text-center rounded-b-3xl shadow-xl border-b-4 border-green-300 relative overflow-hidden">
+            <!-- Background Image (removed) -->
+            <div class="container mx-auto px-4 relative z-10">
+                <h1 class="text-6xl font-extrabold text-green-800 mb-4 leading-tight drop-shadow-lg">PERÚ SANO</h1>
+                <p class="text-4xl font-semibold text-green-700 mb-8 drop-shadow-md">¡AMBIENTE SANO, ESPACIOS SEGUROS!</p>
+                <!-- Impactful introduction - now justified and part of the hero section -->
+                <p class="text-xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed text-justify px-4 md:px-0">
+                    Perú Sano, con RUC 20608476408 ubicada en la Amazonia peruana, se dedica a transformar sus espacios en ambientes impecables y libres de riesgos. Somos líderes en servicios de saneamiento sanitario, comprometidos con la salud y el bienestar de su familia y negocio. Con tecnología de vanguardia y un equipo de expertos, garantizamos soluciones integrales de desinsectación, desratización, desinfección y limpieza profunda, cumpliendo con las más estrictas normativas de salud. ¡Descubra la tranquilidad de vivir y trabajar en un entorno verdaderamente sano!
+                </p>
+                <a href="#servicios" class="inline-block bg-green-600 text-white text-xl font-bold py-4 px-10 rounded-full shadow-xl hover:bg-green-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-75">Explora Nuestros Servicios</a>
+            </div>
+        </section>
+
+        <!-- New Section: Image Gallery (Moved here) -->
+        <section id="galeria-imagenes" class="py-16 bg-gradient-to-br from-green-50 to-emerald-100 mt-12 rounded-3xl shadow-2xl mx-4 md:mx-auto max-w-7xl">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl font-bold text-center text-green-800 mb-12 drop-shadow-sm">Nuestra Galería de Trabajos</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                        <img src="https://i.postimg.cc/Mp42GDp5/IN48-1-11zon.jpg" alt="Imagen de trabajo 1" class="w-full h-48 object-cover rounded-2xl transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
+                            <p class="text-white text-lg font-semibold text-center px-2">PERU SANO SRL</p>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                        <img src="https://i.postimg.cc/HLyG8yJg/IN56-2-11zon.jpg" alt="Imagen de trabajo 2" class="w-full h-48 object-cover rounded-2xl transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
+                            <p class="text-white text-lg font-semibold text-center px-2">PERU SANO SRL</p>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                        <img src="https://i.postimg.cc/XJSRfYFy/IN58-3-11zon.jpg" alt="Imagen de trabajo 3" class="w-full h-48 object-cover rounded-2xl transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
+                            <p class="text-white text-lg font-semibold text-center px-2">PERU SANO SRL</p>
+                        </div>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                        <img src="https://i.postimg.cc/C1GWmpHr/IN80-4-11zon.jpg" alt="Imagen de trabajo 4" class="w-full h-48 object-cover rounded-2xl transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
+                            <p class="text-white text-lg font-semibold text-center px-2">PERU SANO SRL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Trusted Companies (Moved here) -->
+        <section id="empresas-confianza" class="py-16 bg-gradient-to-br from-green-50 to-emerald-100 mt-12 rounded-3xl shadow-2xl mx-4 md:mx-auto max-w-7xl">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl font-bold text-center text-green-800 mb-12 drop-shadow-sm">Empresas que Confían en Nosotros</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center justify-center">
+                    <!-- Company 1: INERCO CONSULTORIA -->
+                    <div class="company-item animated-company-item bg-white p-6 rounded-2xl shadow-lg border border-green-100 flex flex-col items-center justify-center h-40 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out">
+                        <i class="fas fa-industry text-6xl text-green-600 mb-4"></i>
+                        <p class="text-xl font-semibold text-green-700 text-center">INERCO CONSULTORIA</p>
+                    </div>
+                    <!-- Company 2: PETROLEOS DEL PERÚ -->
+                    <div class="company-item animated-company-item bg-white p-6 rounded-2xl shadow-lg border border-green-100 flex flex-col items-center justify-center h-40 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out">
+                        <i class="fas fa-gas-pump text-6xl text-green-600 mb-4"></i>
+                        <p class="text-xl font-semibold text-green-700 text-center">PETROLEOS DEL PERÚ</p>
+                    </div>
+                    <!-- Company 3: CUENCA COLAN -->
+                    <div class="company-item animated-company-item bg-white p-6 rounded-2xl shadow-lg border border-green-100 flex flex-col items-center justify-center h-40 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out">
+                        <i class="fas fa-water text-6xl text-green-600 mb-4"></i>
+                        <p class="text-xl font-semibold text-green-700 text-center">CUENCA COLAN</p>
+                    </div>
+                    <!-- Company 4: CONSORCIO VIAL AMAZONAS -->
+                    <div class="company-item animated-company-item bg-white p-6 rounded-2xl shadow-lg border border-green-100 flex flex-col items-center justify-center h-40 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out">
+                        <i class="fas fa-road text-6xl text-green-600 mb-4"></i>
+                        <p class="text-xl font-semibold text-green-700 text-center">CONSORCIO VIAL AMAZONAS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Our Service Pillars (replacing image gallery) -->
+        <section id="pilares-servicio" class="py-16 bg-gray-50 rounded-3xl shadow-2xl mx-4 md:mx-auto max-w-7xl mt-12">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl font-bold text-center text-green-800 mb-12 drop-shadow-sm">Nuestros Pilares de Servicio</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <!-- Pillar 1: Calidad Certificada -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-green-100 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out">
+                        <i class="fas fa-award text-6xl text-green-600 mb-6"></i>
+                        <h3 class="text-3xl font-semibold text-green-700 mb-4">Calidad Certificada</h3>
+                        <p class="text-gray-600">Trabajamos bajo los más altos estándares y certificaciones para garantizar resultados superiores.</p>
+                    </div>
+                    <!-- Pillar 2: Equipo Experto -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-green-100 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out">
+                        <i class="fas fa-users-cog text-6xl text-green-600 mb-6"></i>
+                        <h3 class="text-3xl font-semibold text-green-700 mb-4">Equipo Experto</h3>
+                        <p class="text-gray-600">Contamos con profesionales altamente capacitados y con años de experiencia en saneamiento.</p>
+                    </div>
+                    <!-- Pillar 3: Innovación y Tecnología -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-green-100 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out">
+                        <i class="fas fa-flask text-6xl text-green-600 mb-6"></i>
+                        <h3 class="text-3xl font-semibold text-green-700 mb-4">Innovación y Tecnología</h3>
+                        <p class="text-gray-600">Utilizamos las últimas tecnologías y productos ecológicos para soluciones eficientes y seguras.</p>
+                    </div>
+                    <!-- Pillar 4: Satisfacción del Cliente -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-green-100 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out">
+                        <i class="fas fa-heart text-6xl text-green-600 mb-6"></i>
+                        <h3 class="text-3xl font-semibold text-green-700 mb-4">Satisfacción del Cliente</h3>
+                        <p class="text-gray-600">Nuestro compromiso es su tranquilidad, garantizando un servicio que supera sus expectativas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="py-16 bg-white rounded-3xl shadow-2xl mx-4 md:mx-auto max-w-7xl mt-12">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl font-bold text-center text-green-800 mb-12 drop-shadow-sm">Nuestros Servicios Especializados</h2>
+
+                <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="service-card bg-gray-50 p-8 rounded-2xl shadow-lg border border-green-100 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out flex flex-col items-center text-center">
+                        <i class="fas fa-bug text-6xl text-green-600 mb-6"></i>
+                        <h3 class="text-3xl font-semibold text-green-700 mb-4">Desinsectación</h3>
+                        <p class="text-gray-600 mb-6 text-justify">Eliminación efectiva de insectos rastreros y voladores, utilizando métodos seguros y aprobados para proteger su espacio.</p>
+                        <button class="request-quote-btn bg-green-600 text-white py-3 px-8 rounded-full hover:bg-green-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400" data-service-name="Desinsectación">Solicitar Cotización</button>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="service-card bg-gray-50 p-8 rounded-2xl shadow-lg border border-green-100 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out flex flex-col items-center text-center">
+                        <i class="fas fa-mouse text-6xl text-green-600 mb-6"></i>
+                        <h3 class="text-3xl font-semibold text-green-700 mb-4">Desratización</h3>
+                        <p class="text-gray-600 mb-6 text-justify">Control y erradicación de roedores, implementando estrategias integrales para prevenir futuras infestaciones.</p>
+                        <button class="request-quote-btn bg-green-600 text-white py-3 px-8 rounded-full hover:bg-green-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400" data-service-name="Desratización">Solicitar Cotización</button>
+                    </div>
+
+                    <!-- Service Card 3 -->
+                    <div class="service-card bg-gray-50 p-8 rounded-2xl shadow-lg border border-green-100 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out flex flex-col items-center text-center">
+                        <i class="fas fa-spray-can text-6xl text-green-600 mb-6"></i>
+                        <h3 class="text-3xl font-semibold text-green-700 mb-4">Desinfección</h3>
+                        <p class="text-gray-600 mb-6 text-justify">Eliminación de microorganismos patógenos para crear ambientes libres de bacterias, virus y hongos.</p>
+                        <button class="request-quote-btn bg-green-600 text-white py-3 px-8 rounded-full hover:bg-green-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400" data-service-name="Desinfección">Solicitar Cotización</button>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="service-card bg-gray-50 p-8 rounded-2xl shadow-lg border border-green-100 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out flex flex-col items-center text-center">
+                        <i class="fas fa-broom text-6xl text-green-600 mb-6"></i>
+                        <h3 class="text-3xl font-semibold text-green-700 mb-4">Limpieza de Ambientes</h3>
+                        <p class="text-gray-600 mb-6 text-justify">Servicios de limpieza profunda para hogares, oficinas y espacios comerciales, garantizando higiene y orden.</p>
+                        <button class="request-quote-btn bg-green-600 text-white py-3 px-8 rounded-full hover:bg-green-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-400" data-service-name="Limpieza de Ambientes">Solicitar Cotización</button>
+                    </div>
+
+                    <!-- Service Card 5 -->
+                    <div class="service-card bg-gray-50 p-8 rounded-2xl shadow-lg border border-green-100 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out flex flex-col items-center text-center">
+                        <i class="fas fa-water text-6xl text-green-600 mb-6"></i>
+                        <h3 class="text-3xl font-semibold text-green-700 mb-4">Limpieza y Desinfección de Reservorios de Agua</h3>
+                        <p class="text-gray-600 mb-6 text-justify">Aseguramos la calidad del agua mediante la limpieza y desinfección profesional de sus reservorios.</p>
+                        <button class="request-quote-btn bg-green-600 text-white py-3 px-8 rounded-full hover:bg-green-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400" data-service-name="Limpieza y Desinfección de Reservorios de Agua">Solicitar Cotización</button>
+                    </div>
+
+                    <!-- Service Card 6 -->
+                    <div class="service-card bg-gray-50 p-8 rounded-2xl shadow-lg border border-green-100 transform hover:scale-105 hover:shadow-xl hover:-translate-y-2 transition duration-300 ease-in-out flex flex-col items-center text-center">
+                        <i class="fas fa-toilet text-6xl text-green-600 mb-6"></i>
+                        <h3 class="text-3xl font-semibold text-green-700 mb-4">Limpieza de Tanques Sépticos</h3>
+                        <p class="text-gray-600 mb-6 text-justify">Mantenimiento y limpieza de tanques sépticos para un funcionamiento óptimo y prevención de problemas.</p>
+                        <button class="request-quote-btn bg-green-600 text-white py-3 px-8 rounded-full hover:bg-green-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400" data-service-name="Limpieza de Tanques Sépticos">Solicitar Cotización</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonios" class="py-16 bg-gradient-to-br from-green-50 to-emerald-100 mt-12 rounded-3xl shadow-2xl mx-4 md:mx-auto max-w-7xl">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl font-bold text-center text-green-800 mb-12 drop-shadow-sm">Lo que Dicen Nuestros Clientes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-green-100 flex flex-col justify-between h-full">
+                        <p class="text-gray-700 italic mb-6 text-lg leading-relaxed">"El equipo de Perú Sano realizó un trabajo excepcional de desinfección en nuestra oficina. El ambiente se siente mucho más limpio y seguro. ¡Altamente recomendados!"</p>
+                        <p class="font-semibold text-green-700 text-right">- Ana María G., Gerente de Oficina</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-green-100 flex flex-col justify-between h-full">
+                        <p class="text-gray-700 italic mb-6 text-lg leading-relaxed">"Contratamos el servicio de desratización para nuestra casa y los resultados fueron inmediatos. La atención fue muy profesional y eficiente. Gracias, Perú Sano."</p>
+                        <p class="font-semibold text-green-700 text-right">- Carlos R.,., Propietario de Vivienda</p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-green-100 flex flex-col justify-between h-full">
+                        <p class="text-gray-700 italic mb-6 text-lg leading-relaxed">"La limpieza de nuestro reservorio de agua fue impecable. Nos explicaron todo el proceso y nos dieron mucha confianza. Un servicio de primera."</p>
+                        <p class="font-semibold text-green-700 text-right">- Sofía L., Administradora de Edificio</p>
+                    </div>
+                    <!-- Testimonial 4 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-green-100 flex flex-col justify-between h-full">
+                        <p class="text-gray-700 italic mb-6 text-lg leading-relaxed">"Necesitábamos una desinsectación urgente y Perú Sano respondió rápidamente. Su profesionalismo y la efectividad del servicio superaron nuestras expectativas."</p>
+                        <p class="font-semibold text-green-700 text-right">- Javier M., Dueño de Restaurante</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="py-16 bg-gradient-to-tl from-green-50 to-white mt-12 rounded-3xl shadow-2xl mx-4 md:mx-auto max-w-7xl">
+            <div class="container mx-auto px-6">
+                <h2 class="text-5xl font-bold text-center text-green-800 mb-12 drop-shadow-sm">Contáctanos</h2>
+                <div class="flex flex-col md:flex-row gap-10">
+                    <div class="md:w-1/2 bg-white p-10 rounded-2xl shadow-lg border border-green-100">
+                        <h3 class="text-3xl font-semibold text-green-700 mb-8">Envíanos un Mensaje</h3>
+                        <form id="contactForm">
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 text-base font-medium mb-2">Nombre Completo</label>
+                                <input type="text" id="name" name="nombre" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 placeholder-gray-400" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 text-base font-medium mb-2">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 placeholder-gray-400" placeholder="tu.email@example.com" required>
+                            </div>
+                            <div class="mb-8">
+                                <label for="message" class="block text-gray-700 text-base font-medium mb-2">Mensaje</label>
+                                <textarea id="message" name="mensaje" rows="6" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 placeholder-gray-400" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-green-600 text-white py-4 px-8 rounded-full font-bold text-lg hover:bg-green-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-75">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                    <div class="md:w-1/2 bg-white p-10 rounded-2xl shadow-lg border border-green-100">
+                        <h3 class="text-3xl font-semibold text-green-700 mb-8">Nuestra Información de Contacto</h3>
+                        <div class="space-y-6 text-gray-700 text-lg">
+                            <p class="flex items-center"><i class="fas fa-map-marker-alt text-green-600 text-2xl mr-4"></i> Jr. Lambayeque 185 Bagua Amazonas</p>
+                            <p class="flex items-center"><i class="fas fa-phone-alt text-green-600 text-2xl mr-4"></i> +51 999140549</p>
+                            <p class="flex items-center"><i class="fas fa-envelope text-green-600 text-2xl mr-4"></i> serviciosanitariosdelperu@gmail.com</p>
+                            <p class="flex items-center"><i class="fas fa-clock text-green-600 text-2xl mr-4"></i> Lunes - Viernes: 9:00 AM - 6:00 PM</p>
+                        </div>
+                        <div class="mt-10">
+                            <h3 class="text-2xl font-semibold text-green-700 mb-6">Síguenos en Redes Sociales</h3>
+                            <div class="flex space-x-6">
+                                <a href="#" class="text-green-600 hover:text-green-800 text-4xl transition duration-300 transform hover:scale-110"><i class="fab fa-facebook-square"></i></a>
+                                <a href="#" class="text-green-600 hover:text-green-800 text-4xl transition duration-300 transform hover:scale-110"><i class="fab fa-instagram-square"></i></a>
+                                <a href="#" class="text-green-600 hover:text-green-800 text-4xl transition duration-300 transform hover:scale-110"><i class="fab fa-twitter-square"></i></a>
+                                <a href="#" class="text-green-600 hover:text-green-800 text-4xl transition duration-300 transform hover:scale-110"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 mt-8 rounded-t-3xl shadow-inner">
+        <div class="container mx-auto text-center px-4">
+            <p class="text-lg mb-2">&copy; 2025 Perú Sano. Todos los derechos reservados.</p>
+            <p class="text-sm mb-1">Editor: Immer Vera Cienfuegos</p>
+            <p class="text-sm mb-4">Email: veracienfuegosinmer@gmail.com</p>
+            <div class="flex justify-center space-x-8 text-md font-light">
+                <a href="#" class="hover:text-green-400 transition duration-300">Política de Privacidad</a>
+                <a href="#" class="hover:text-green-400 transition duration-300">Términos de Servicio</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/51999140549" class="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-xl hover:bg-green-600 transition duration-300 transform hover:scale-110 z-50" target="_blank" aria-label="Chatear por WhatsApp">
+        <i class="fab fa-whatsapp text-4xl"></i>
+    </a>
+
+    <!-- Service Recommendation Modal -->
+    <div id="serviceRecommendationModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[100] hidden">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl w-11/12 max-w-3xl transform scale-95 opacity-0 transition-all duration-300 ease-out">
+            <div class="flex justify-between items-center border-b pb-4 mb-6">
+                <h2 class="text-3xl font-bold text-green-700">Generador de Sugerencias de Servicio ✨</h2>
+                <button id="closeServiceRecommendationModal" class="text-gray-500 hover:text-gray-700 text-4xl leading-none">&times;</button>
+            </div>
+            <form id="serviceRecommendationForm" class="space-y-6">
+                <div>
+                    <label for="propertyType" class="block text-gray-700 text-lg font-medium mb-2">Tipo de Propiedad:</label>
+                    <select id="propertyType" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300" required>
+                        <option value="">Seleccione</option>
+                        <option value="Residencial">Residencial</option>
+                        <option value="Comercial">Comercial</option>
+                        <option value="Industrial">Industrial</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="areaSize" class="block text-gray-700 text-lg font-medium mb-2">Tamaño del Área:</label>
+                    <select id="areaSize" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300" required>
+                        <option value="">Seleccione</option>
+                        <option value="Pequeña (menos de 50 m²)">Pequeña (menos de 50 m²)</option>
+                        <option value="Mediana (50-200 m²)">Mediana (50-200 m²)</option>
+                        <option value="Grande (más de 200 m²)">Grande (más de 200 m²)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="problemDescription" class="block text-gray-700 text-lg font-medium mb-2">Describa el Problema Específico:</label>
+                    <textarea id="problemDescription" rows="4" class="w-full px-5 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-300 placeholder-gray-400" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                <input type="hidden" id="serviceOfInterest" value="">
+                <button type="submit" id="generateSuggestionButton" class="w-full bg-green-600 text-white py-3 px-8 rounded-full font-bold text-lg hover:bg-green-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-75">Generar Sugerencia ✨</button>
+            </form>
+            <div id="suggestionResult" class="mt-8 p-6 bg-green-50 rounded-xl border border-green-200 hidden">
+                <h3 class="text-2xl font-semibold text-green-700 mb-4">Nuestra Sugerencia Personalizada:</h3>
+                <div id="suggestionContent" class="text-gray-700 leading-relaxed">
+                    <!-- LLM generated content will be displayed here -->
+                </div>
+                <div id="loadingIndicator" class="text-center mt-4 hidden">
+                    <i class="fas fa-spinner fa-spin text-green-600 text-3xl"></i>
+                    <p class="text-green-600 mt-2">Generando sugerencia...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Modal (Existing) -->
+    <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-end z-50 hidden">
+        <div class="bg-white w-full max-w-sm h-full p-6 shadow-lg rounded-l-xl flex flex-col">
+            <div class="flex justify-between items-center border-b pb-4 mb-4">
+                <h2 class="text-2xl font-bold text-green-700">Tu Carrito</h2>
+                <button id="closeCartButton" class="text-gray-500 hover:text-gray-700 text-3xl">&times;</button>
+            </div>
+            <div id="cartItems" class="flex-grow overflow-y-auto custom-scrollbar pr-2">
+                <!-- Cart items will be dynamically added here -->
+                <p id="emptyCartMessage" class="text-gray-600 text-center mt-8">El carrito está vacío.</p>
+            </div>
+            <div class="border-t pt-4 mt-4">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-lg font-semibold text-gray-700">Total:</span>
+                    <span id="cartTotal" class="text-2xl font-bold text-green-700">S/ 0.00</span>
+                </div>
+                <button id="proceedToCheckoutButton" class="w-full bg-green-600 text-white py-3 px-6 rounded-full font-semibold hover:bg-green-700 transition duration-300">Proceder al Pago</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Status Modal -->
+    <div id="messageStatusModal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[100] hidden">
+        <div class="bg-white p-8 rounded-2xl shadow-2xl w-11/12 max-w-md transform scale-95 opacity-0 transition-all duration-300 ease-out text-center">
+            <h3 id="messageStatusTitle" class="text-3xl font-bold mb-4"></h3>
+            <p id="messageStatusContent" class="text-gray-700 text-lg mb-6"></p>
+            <button id="closeMessageStatusModal" class="bg-green-600 text-white py-3 px-8 rounded-full font-bold hover:bg-green-700 transition duration-300">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+
+    <script>
+        // JavaScript for responsive navigation toggle
+        const menuButton = document.getElementById('menuButton');
+        const navMenu = document.getElementById('navMenu');
+
+        if (menuButton && navMenu) {
+            menuButton.addEventListener('click', () => {
+                navMenu.classList.toggle('hidden');
+                navMenu.classList.toggle('flex');
+                // Adjust layout for mobile when menu is open
+                if (navMenu.classList.contains('flex')) {
+                    navMenu.classList.add('flex-col', 'absolute', 'top-full', 'left-0', 'bg-white', 'w-full', 'shadow-lg', 'py-4', 'md:relative', 'md:flex-row');
+                    navMenu.classList.remove('md:w-auto');
+                } else {
+                    navMenu.classList.remove('flex-col', 'absolute', 'top-full', 'left-0', 'bg-white', 'w-full', 'shadow-lg', 'py-4');
+                    navMenu.classList.add('md:w-auto');
+                }
+            });
+
+            // Close mobile menu when a navigation link is clicked
+            document.querySelectorAll('#navMenu nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 768) { // Only close if on mobile (md breakpoint is 768px)
+                        navMenu.classList.add('hidden');
+                        navMenu.classList.remove('flex', 'flex-col', 'absolute', 'top-full', 'left-0', 'bg-white', 'w-full', 'shadow-lg', 'py-4');
+                        navMenu.classList.add('md:w-auto');
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>
